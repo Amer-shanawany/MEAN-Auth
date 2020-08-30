@@ -1,1 +1,2 @@
-#MEAN-Auth
+
+##MEAN Stack Jwt Authentication SPA
