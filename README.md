@@ -49,7 +49,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 Run `ng build` to build the project. The build artifacts will be stored in the `../public/` directory. Use the `--prod` flag for a production build.
 
 ## Endpoints
-====
+
 
 | Endpoint |    Description |
 |----------| ----------- |
@@ -58,7 +58,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 | /users/profile | to get user profile data
 
 ## Using docker
-====
+
 to build using docker-compose
 
         docker-compose up --build
