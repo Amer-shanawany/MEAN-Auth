@@ -51,11 +51,11 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 ## Endpoints
 
 
-| Endpoint |    Description |
-|----------| ----------- |
-| /users/register | to register a new user
-| /users/authenticate | to get a Jwt token
-| /users/profile | to get user profile data
+| Method | Endpoint |    Description |
+|----------| ----------- | ----------- |
+| POST | /users/register | to register a new user
+| POST | /users/authenticate | to get a Jwt token
+| GET | /users/profile | to get user profile data
 
 ## Using docker
 
