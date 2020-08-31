@@ -1,5 +1,6 @@
-
-# MEAN Stack  RESTful API Jwt Authentication Login SPA
+ ![mean-logo](./mean-logo.png)
+ 
+ # MEAN Stack  RESTful API Jwt Authentication Login SPA
 
 This repo contains the code for a RESTful API Login/User-profile that was built using the MEAN stack:
 
