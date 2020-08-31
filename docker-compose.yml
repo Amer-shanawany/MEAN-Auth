@@ -1,0 +1,39 @@
+version: '3'
+
+services: 
+    mean-app:
+        build: ./
+        container_name: mean-front-api
+        ports:
+            - "80:80"
+        links:
+            - mongodb
+        volumes: 
+            - .:/usr/src/app
+        depends_on: 
+            - mongodb
+        restart: always
+        networks: 
+            - localnet
+        environment: 
+            MONGO_HOST: mongodb
+    mongodb:
+        user: $UID # to avoid permissions (on Linux export )
+        image: mongo
+        container_name: mean-mongo
+        environment: 
+            MONGO_INITDB_ROOT_USERNAME: root
+            MONGO_INITDB_ROOT_PASSWORD: secret
+            MONGO_INITDB_DATABASE: auth
+            MONGO_USERNAME: admin
+            MONOG_PASSWORD: secret
+        ports:
+            - "27017:27017"
+        networks: 
+            - localnet
+        volumes: 
+            - ./data:/data/db
+            - ./mongo-init.sh:/docker-entrypoint-initdb.d/mongo-init.sh:ro
+networks:
+    localnet:
+        driver: bridge
